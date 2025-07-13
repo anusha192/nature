@@ -224,6 +224,9 @@ body {
 }
 
 @media (max-width: 600px) {
+  body {
+    width: 100%;
+  }
   .about-part a {
     display: none;
   }
@@ -270,6 +273,9 @@ body {
   .right,
   .left {
     padding: 0 2rem;
+  }
+  .right p {
+    font-size: 1.4rem;
   }
 
   .right .btn {
