@@ -3,11 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 14px;
+}
 body {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --paragraph: 1.14rem;
+  --heading1: 2.5rem;
+  --heading2: 2rem;
+  --heading3: 1.5rem;
+  --spacing: 2rem;
+  --max-width: 1400px;
 }
 
 .section1 {
@@ -33,11 +45,11 @@ body {
   max-width: 1400px;
   padding: 0 2rem;
 }
-.navbar h1 {
+.navbar span {
   font-style: italic;
   font-weight: 400;
-  font-size: 1.6rem;
 }
+
 .about-part {
   display: flex;
   justify-content: center;
@@ -48,12 +60,12 @@ body {
   list-style: none;
   text-decoration: none;
   color: #fff;
+  font-size: 1rem;
 }
 .about-part .btn {
   height: 3rem;
   width: 6rem;
   border-radius: 12px;
-  background-color: transparent;
   border-style: none;
   background-color: rgb(38, 38, 43);
   color: rgb(228, 234, 239);
@@ -63,6 +75,7 @@ body {
 .about-part i {
   display: none;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -71,20 +84,27 @@ body {
   width: 100%;
   height: calc(100vh - 100px);
   color: #fff;
-  gap: 2rem;
-  font-size: 2vw;
-  font-weight: 12vw;
-  line-height: 2.6rem;
-  max-width: 1400px;
+  gap: 1rem;
+  font-size: var(--paragraph);
+  max-width: var(--max-width);
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+.main h1 {
+  font-size: var(--heading1);
+  line-height: 3rem;
+}
+.main h2 {
+  font-size: var(--heading2);
+}
+
 .main p {
   text-align: justify;
   max-width: 600px;
-  margin: 0 auto;
   text-align: center;
+  font-size: var(--paragraph);
 }
+
 .main .btns {
   display: flex;
   gap: 2rem;
@@ -121,10 +141,10 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   /* flex-wrap: wrap; */
 }
-.images img {
+.service-card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -166,6 +186,7 @@ body {
   width: 30%;
   height: 4rem;
   color: #fff;
+  font-size: 1rem;
   background-color: rgb(38, 38, 43);
 }
 .section3 {
@@ -193,7 +214,7 @@ body {
   font-weight: 500;
 }
 .section3-container p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.5rem;
 }
 .section3-container button {
@@ -203,7 +224,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   border: 2px solid#fff;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .section3-container button:hover {
   background-color: #fff;
@@ -212,14 +233,14 @@ body {
 .section4 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.6rem;
+  gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
 .section4 img {
   height: 16rem;
-  width: 26rem;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -247,6 +268,9 @@ body {
   h3,
   h2 {
     font-size: 1rem;
+  }
+  .main p {
+    padding: 0 2rem;
   }
 
   .paragraph-part {
@@ -296,11 +320,15 @@ body {
     line-height: 1.5rem;
     text-align: center;
   }
+  .section3 {
+    width: 100%;
+  }
   .section4 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   .section4 img {
     padding: 0 2rem;
